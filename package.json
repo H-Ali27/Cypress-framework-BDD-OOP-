@@ -1,0 +1,31 @@
+{
+  "name": "practicesession-orangecrm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "Alltest": "node_modules\\.bin\\cypress run",
+    "headtest": "npm run Alltest -- --headed",
+    "ElectronTest": "npm run Alltest -- --browser chrome",
+    "recordDashBoardTest": "npm run Alltest -- --record --key a454b6b5-5412-4827-9a7a-7943286e3f0e --reporter mochawesome",
+    "singleFile": "npx cypress run --spec cypress/integration/examples/Session1.js -- --headed"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumberReportss/result.json"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.5.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-iframe": "^1.0.1",
+    "multiple-cucumber-html-reporter": "^3.5.0"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^19.1.0",
+    "@cypress/browserify-preprocessor": "latest"
+  }
+}
